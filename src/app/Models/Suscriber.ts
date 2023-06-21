@@ -21,20 +21,20 @@ export class Suscriber{
     this._account = value;
   }
 
-  private _CreatedAt: Date = new Date();
-    public get CreatedAt(): Date {
-    return this._CreatedAt;
+  private _createdAt: Date = new Date();
+    public get createdAt(): Date {
+    return this._createdAt;
   }
-  public set CreatedAt(value: Date) {
-    this._CreatedAt = value;
+  public set createdAt(value: Date) {
+    this._createdAt = value;
   }
 
-  private _UpdatedAt: Date = new Date();
-  public get UpdatedAt(): Date {
-    return this._UpdatedAt;
+  private _updatedAt: Date = new Date();
+  public get updatedAt(): Date {
+    return this._updatedAt;
   }
-  public set UpdatedAt(up: Date) {
-    this._UpdatedAt = up;
+  public set updatedAt(up: Date) {
+    this._updatedAt = up;
   }
 
 

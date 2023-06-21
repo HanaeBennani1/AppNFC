@@ -15,11 +15,11 @@ export class Account{
       this._id = value;
     }
 
-    private _AccountType: AccountType = new AccountType();
-    public get AccountType(): AccountType {
+    private _AccountType: AccountType = AccountType.SoloUser;
+    public get accountType(): AccountType {
     return this._AccountType;
   }
-  public set AccountType(value: AccountType) {
+  public set accountType(value: AccountType) {
     this._AccountType = value;
   }
 
@@ -48,59 +48,60 @@ export class Account{
   }
 
   private _SuscriberId : string="";
-  public get SuscriberId() : string {
+  public get suscriberId() : string {
     return this._SuscriberId;
   }
-  public set SuscriberId(v : string) {
+  public set suscriberId(v : string) {
     this._SuscriberId = v;
   }
 
 
-  private _Suscriber: Suscriber = new Suscriber();
-  public get Suscriber(): Suscriber {
-    return this._Suscriber;
-  }
-  public set Suscriber(value: Suscriber) {
-    this._Suscriber = value;
-  }
+  // private _Suscriber: Suscriber = new Suscriber();
+  // public get Suscriber(): Suscriber {
+  //   return this._Suscriber;
+  // }
+  // public set Suscriber(value: Suscriber) {
+  //   this._Suscriber = value;
+  // }
 
-  private _Profile!: number[];
-  public get profile() : Profile{
-    return this.profile;
+  private _Profiles: Profile[] =[];
+  public get profiles() : Profile[]{
+    //return this.profile;
+    return this._Profiles;
   }
-  public set profile(p : Profile) {
-    this._Profile! = [];
+  public set profile(p : Profile[]) {
+    this._Profiles = p;
   }
 
   private _MaxProfileNumber : number= 0;
-    public get MaxProfileNumber() : number {
+    public get maxProfileNumber() : number {
       return this._MaxProfileNumber;
     }
-    public set MaxProfileNumber(maxP : number) {
+    public set maxProfileNumber(maxP : number) {
       this._MaxProfileNumber = maxP;
     }
 
-    private _CurrentProfileNumber : number= 0;
-    public get CurrentProfileNumber() : number {
-      return this._CurrentProfileNumber;
+    private _currentProfileNumber : number= 0;
+    public get currentProfileNumber() : number {
+      return this._currentProfileNumber;
     }
-    public set CurrentProfileNumber(curentP : number) {
-      this._CurrentProfileNumber = curentP;
+    public set currentProfileNumber(curentP : number) {
+      this._currentProfileNumber = curentP;
     }
 
-    private _CreatedAt: Date = new Date();
-    public get CreatedAt(): Date {
-    return this._CreatedAt;
+    private _createdAt: Date = new Date();
+    public get createdAt(): Date {
+    return this._createdAt;
   }
-  public set CreatedAt(value: Date) {
-    this._CreatedAt = value;
+  public set createdAt(value: Date) {
+    this._createdAt = value;
   }
 
-  private _UpdatedAt: Date = new Date();
-  public get UpdatedAt(): Date {
-    return this._UpdatedAt;
+  private _updatedAt: Date = new Date();
+  public get updatedAt(): Date {
+    return this._updatedAt;
   }
-  public set UpdatedAt(up: Date) {
-    this._UpdatedAt = up;
+  public set updatedAt(up: Date) {
+    this._updatedAt = up;
   }
 }

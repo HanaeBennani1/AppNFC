@@ -35,7 +35,7 @@ export class SigninComponent implements OnInit, OnDestroy {
     }
 
     const exist = this.autService.users.find((data)=>{
-      if(data.mail == r.mail && data.password == r.password){
+      if(data.account.mail == r.mail && data.account.password == r.password){
         this.autService.currentUserId = data.id;
         this.autService.currentUser = data;
         return data;

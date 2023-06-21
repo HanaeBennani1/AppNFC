@@ -1,13 +1,13 @@
-import { Account } from "./Account";
 import { Social } from "./Social";
 import { Card } from "./Card";
+import { Account } from "./Account";
 export class Profile{
 
     constructor() {
 
     }
-  
-  
+
+
     private _id: string = "";
     public get id(): string {
       return this._id;
@@ -33,91 +33,91 @@ export class Profile{
   }
 
   private _FirstName: string = "";
-    public get FirstName():string {
+    public get firstName():string {
         return this._FirstName;
     }
-    public set FirstName(value: string){
+    public set firstName(value: string){
         this._FirstName = value;
     }
 
     private _LastName: string = "";
-    public get LastName():string {
+    public get lastName():string {
         return this._LastName;
     }
-    public set LastName(value: string){
+    public set lastName(value: string){
         this._LastName = value;
     }
 
-    private _PhoneNumber: string = "";
-    public get PhoneNumber():string {
-        return this._PhoneNumber;
+    private _phoneNumber: string = "";
+    public get phoneNumber():string {
+        return this._phoneNumber;
     }
-    public set PhoneNumber(value: string){
-        this._PhoneNumber = value;
-    }
-
-    private _Address: string = "";
-    public get Adress():string {
-        return this._Address;
-    }
-    public set Address(value: string){
-        this._Address = value;
+    public set phoneNumber(value: string){
+        this._phoneNumber = value;
     }
 
-    private _CreatedAt: Date = new Date();
-  public get CreatedAt(): Date {
-    return this._CreatedAt;
+    private _address: string = "";
+    public get adress():string {
+        return this._address;
+    }
+    public set address(value: string){
+        this._address = value;
+    }
+
+    private _createdAt: Date = new Date();
+  public get createdAt(): Date {
+    return this._createdAt;
   }
-  public set CreatedAt(value: Date) {
-    this._CreatedAt = value;
+  public set createdAt(value: Date) {
+    this._createdAt = value;
   }
 
-  private _UpdateAt: Date = new Date();
-  public get UpdateAt(): Date {
-    return this._UpdateAt;
+  private _updateAt: Date = new Date();
+  public get updateAt(): Date {
+    return this._updateAt;
   }
-  public set UpdateAt(value: Date) {
-    this._UpdateAt = value;
-  }
-
-  private _Socials!: number[];
-  public get social() : Social{
-    return this.social;
-  }
-  public set social(v : Social) {
-    this._Socials! = [];
+  public set updateAt(value: Date) {
+    this._updateAt = value;
   }
 
-  private _Cards!: number[];
-  public get cards() : Card{
-    return this.cards;
+  private _socials: Social[]=[];
+  public get social() : Social[]{
+    return this._socials;
   }
-  public set cards(c : Card) {
-    this._Cards! = [];
-  }
-
-  private _account: Account = new Account();
-  public get account(): Account {
-    return this._account;
-  }
-  public set account(value: Account) {
-    this._account = value;
+  public set social(v : Social[]) {
+    this._socials = v;
   }
 
-  private _AccountId : string="";
-  public get AccountId() : string {
-    return this._AccountId;
+  private _cards: Card[] = [];
+  public get cards() : Card[]{
+    return this._cards;
   }
-  public set AccountId(v : string) {
-    this._AccountId = v;
+  public set cards(c : Card[]) {
+    this._cards = c;
   }
 
-  private _ImagePath: string = "";
-    public get ImagePath():string {
-        return this._ImagePath;
+  // private _account: Account = new Account();
+  // public get account(): Account {
+  //   return this._account;
+  // }
+  // public set account(value: Account) {
+  //   this._account = value;
+  // }
+
+  private _accountId : string="";
+  public get accountId() : string {
+    return this._accountId;
+  }
+  public set accountId(v : string) {
+    this._accountId = v;
+  }
+
+  private _imagePath: string = "";
+    public get imagePath():string {
+        return this._imagePath;
     }
     public set ImagePath(value: string){
-        this._ImagePath = value;
+        this._imagePath = value;
     }
 
     private _Lattitude : number = 0;

@@ -14,7 +14,8 @@ export class UsersService {
 
   constructor(private http: HttpClient) { }
 
-  AddUser(user : User): Observable<User> {
+  AddUser(user : object): Observable<object> {
+    console.log("From Service",user);
     return this.http.post<User>(`${this.baseApiUrl}Post`,user)
     .pipe(
       catchError(this.handleError)

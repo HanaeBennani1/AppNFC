@@ -4,8 +4,8 @@ export class Card{
     constructor() {
 
     }
-  
-  
+
+
     private _id: string = "";
     public get id(): string {
       return this._id;
@@ -31,11 +31,11 @@ export class Card{
   }
 
 
-  private _Profile: Profile = new Profile();
-  public get Profile(): Profile {
-    return this._Profile;
-  }
-  public set Profile(value: Profile) {
-    this._Profile = value;
-  }
+  // private _Profile: Profile = new Profile();
+  // public get Profile(): Profile {
+  //   return this._Profile;
+  // }
+  // public set Profile(value: Profile) {
+  //   this._Profile = value;
+  // }
 }

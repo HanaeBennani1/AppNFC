@@ -1,0 +1,20 @@
+Corrections
+
+
+1) Changer la classe AccountType en enum AccountType (faire la meme chose avec socialPlatform)
+
+2) Pull la derniere version de l'API (Ajout de la configuration pour le CORS)
+
+3) Faire heriter les classes User et Company de Suscriber
+
+4) Supprimer l'attribut id dans User et Company (ils heritent de l'id de Suscriber)
+
+5) Supprimer l'attribut Suscriber dans la classe Account et Profile (garder l'attribut SuscriberId et  AccountId)
+
+6) Supprimer email et password dans la classe User
+
+7) Mettre les noms des attributs tout en minuscule
+
+8) SignupComponent
+  -Refactoriser le ngOnChanges avec les changements
+  -refactoring du onSubmit (creation d'une const User et affectation des valeurs du formGroup)

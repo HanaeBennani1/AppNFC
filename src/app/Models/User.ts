@@ -1,19 +1,20 @@
 import { Suscriber } from "./Suscriber";
-export class User{
-  [x: string]: any;
+export class User extends Suscriber{
+  //[x: string]: any;
 
     constructor() {
+      super();
 
     }
-  
-  
-    private _id: string = "";
-    public get id(): string {
-      return this._id;
-    }
-    public set id(value: string) {
-      this._id = value;
-    }
+
+
+    // private _id: string = "";
+    // public get id(): string {
+    //   return this._id;
+    // }
+    // public set id(value: string) {
+    //   this._id = value;
+    // }
 
     private _firstName: string = "";
     public get firstName():string {
@@ -47,21 +48,21 @@ export class User{
         this._address = value;
     }
 
-    private _mail: string = "";
-    public get mail():string {
-        return this._mail;
-    }
-    public set mail(value: string){
-        this._mail = value;
-    }
+    // private _mail: string = "";
+    // public get mail():string {
+    //     return this._mail;
+    // }
+    // public set mail(value: string){
+    //     this._mail = value;
+    // }
 
-    private _password: string = "";
-    public get password():string {
-        return this._password;
-    }
-    public set password(value: string){
-        this._password = value;
-    }
+    // private _password: string = "";
+    // public get password():string {
+    //     return this._password;
+    // }
+    // public set password(value: string){
+    //     this._password = value;
+    // }
 
     private _birth: Date = new Date();
   public get birth(): Date {
